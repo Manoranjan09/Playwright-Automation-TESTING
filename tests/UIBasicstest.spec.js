@@ -27,7 +27,7 @@ await expect(documentLink).toHaveAttribute("class" ,"blinkingText");
 });
 
 // SECOND ONE IS THIS 
-test.only('page context  playwright test ',async ({browser})=>
+test('page context  playwright test ',async ({browser})=>
 {
 
 // Playwright code    
