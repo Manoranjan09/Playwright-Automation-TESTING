@@ -10,18 +10,27 @@ class DashboardPage {
 
     async searchProductAddcart(productName) {
 
-        await this.productsText.first().waitFor();
-        const titles = await this.productsText.allTextContents();
-        console.log(titles);
+    await this.productsText.first().waitFor();
 
-        const count = await this.products.count();
-        for (let i = 0; i < count; ++i) {
-            if (await this.products.nth(i).locator("b").textContent() === productName) {
-                await this.products.nth(i).locator("text=Add To Cart").click();
-                break;
-            }
+    const count = await this.products.count();
+
+    for (let i = 0; i < count; ++i) {
+
+        if (await this.products.nth(i).locator("b").textContent() === productName) {
+
+            await this.products.nth(i)
+                .locator("text=Add To Cart")
+                .click();
+
+            // Wait until spinner disappears
+            await this.page.locator(".ng-animating").last().waitFor({
+                state: "hidden"
+            });
+
+            break;
         }
     }
+}
 
     async navigatTocart() {
         await this.cart.click();

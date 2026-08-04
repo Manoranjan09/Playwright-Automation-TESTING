@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { POManager } = require('../pageobjects/POManager');
 
 const dataset = JSON.parse(
-    JSON.stringify(require('./utils/data.json'))
+    JSON.stringify(require('../utils/TestData.json'))
 );
 
 test.beforeAll(async () => {

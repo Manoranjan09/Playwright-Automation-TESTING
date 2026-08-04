@@ -1,4 +1,6 @@
 const {test ,expect} = require('@playwright/test');
+//test.describe.configure({mode:'parallel'});
+//test.describe.configure({mode:'serial'});
 
 test("Popup Validations" , async({page}) =>
 {
@@ -9,7 +11,7 @@ test("Popup Validations" , async({page}) =>
     await expect(page.locator("#displayed-text")).toBeVisible();
     await page.locator("#hide-textbox").click();
     await expect(page.locator("#displayed-text")).toBeHidden();
-    await page.pause();
+    //await page.pause();
     // Dialog Box Popup
     page.on('dialog' ,dialog => dialog.accept());
     await page.locator("#confirmbtn").click();
