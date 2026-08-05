@@ -30,7 +30,7 @@ async function readExcel(worksheet, searchText) {
 // Update Banana's price to 350
 //writeExcelTest("Banana", 350,{ rowChange: 0, colChange: 2 },"/Users/manoranjankumar/Desktop/ExceldownloadTest.xlsx");
 
-test('upload download excel validation' ,async ({page}) =>{
+test('@Web upload download excel validation' ,async ({page}) =>{
     const textSearch = 'Mango';
     const updatevalue = '350';
 

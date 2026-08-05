@@ -3,17 +3,30 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test" : "npx playwright test webAPIpart2.spec.js"
-  },
+  "regression": "npx playwright test",
+  "webTests": "npx playwright test --grep @Web",
+  "APITests": "npx playwright test --grep @API",
+  "safariNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
+
+  "allure:test": "npx playwright test --reporter=line,allure-playwright",
+  "allure:generate": "npx allure generate ./allure-results --clean",
+  "allure:open": "npx allure open",
+  "allure:serve": "npx allure serve ./allure-results",
+
+  "allure:web": "npx playwright test --grep @Web --reporter=line,allure-playwright",
+  "allure:api": "npx playwright test --grep @API --reporter=line,allure-playwright"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.62.0",
-    "@types/node": "^26.1.2"
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.2",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.2"
   },
   "dependencies": {
-    "exceljs":"^4.4.0"
+    "exceljs": "^4.4.0"
   }
 }

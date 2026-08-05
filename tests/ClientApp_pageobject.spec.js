@@ -39,7 +39,7 @@ for (const data of dataSet) {
 
 
 
-customtest(`Client App login - ${data.email}`, async ({ page, testDataForOrder }) => {
+customtest(`@Web Client App login - ${data.email}`, async ({ page, testDataForOrder }) => {
 
         const poManager = new POManager(page);
 

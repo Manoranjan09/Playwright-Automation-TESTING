@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"a4910524bbae8aa4be1c846d0fafaa29","name":"upload-download.spec.js","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}},{"uid":"bd87642e71847dbb9ec3764658ef9e62","name":"ClientApp_pageobject.spec.js","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
