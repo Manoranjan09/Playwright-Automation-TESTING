@@ -28,7 +28,7 @@ for (const data of dataSet) {
         await ordersReviewPage.searchCountryAndSelect("ind", "India");
 
         const orderId = await ordersReviewPage.SubmitAndGetOrderId();
-
+        console.log(orderId);
         await dashboardPage.navigateToOrders();
 
         const ordersHistoryPage = poManager.getOrdersHistoryPage();
