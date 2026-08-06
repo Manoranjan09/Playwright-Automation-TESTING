@@ -7,6 +7,7 @@
     "webTests": "npx playwright test --grep @Web",
     "APITests": "npx playwright test --grep @API",
     "safariNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
+    "CucumberReghression" : "px cucumber-js features/Ecommerce.feature --parallel 2  --exit --format html:cucumber-report.html",
     "allure:test": "npx playwright test --reporter=line,allure-playwright",
     "allure:generate": "npx allure generate ./allure-results --clean",
     "allure:open": "npx allure open",
